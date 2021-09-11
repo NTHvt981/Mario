@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Debug.cpp">
+      <Filter>source\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>source\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="IAnimation.cpp">
+      <Filter>source\graphic_resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ISpriteLib.cpp">
+      <Filter>source\graphic_resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ISprite.cpp">
+      <Filter>source\graphic_resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ITextureLib.cpp">
+      <Filter>source\graphic_resource</Filter>
+    </ClCompile>
+    <ClCompile Include="IGraphic.cpp">
+      <Filter>source\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="IGObject.cpp">
+      <Filter>source\object</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>source\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="IMessage.cpp">
+      <Filter>source\message</Filter>
+    </ClCompile>
+    <ClCompile Include="ICamera.cpp">
+      <Filter>source\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="IGame.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="IPhysic.cpp">
+      <Filter>source\physic</Filter>
+    </ClCompile>
+    <ClCompile Include="IGObjectLib.cpp">
+      <Filter>source\object</Filter>
+    </ClCompile>
+    <ClCompile Include="IEntity.cpp">
+      <Filter>source\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="IEntityLib.cpp">
+      <Filter>source\entity</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Debug.h">
+      <Filter>source\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>source\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IAnimation.h">
+      <Filter>source\graphic_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ISpriteLib.h">
+      <Filter>source\graphic_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ISprite.h">
+      <Filter>source\graphic_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ITextureLib.h">
+      <Filter>source\graphic_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="IGraphic.h">
+      <Filter>source\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="IGObject.h">
+      <Filter>source\object</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>source\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IData.h">
+      <Filter>source\data</Filter>
+    </ClInclude>
+    <ClInclude Include="IMessage.h">
+      <Filter>source\message</Filter>
+    </ClInclude>
+    <ClInclude Include="ICamera.h">
+      <Filter>source\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="IGame.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="IPhysic.h">
+      <Filter>source\physic</Filter>
+    </ClInclude>
+    <ClInclude Include="IGObjectLib.h">
+      <Filter>source\object</Filter>
+    </ClInclude>
+    <ClInclude Include="IEntity.h">
+      <Filter>source\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="IEntityLib.h">
+      <Filter>source\entity</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{df476fec-8b6a-4bec-8996-ff776123c4f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils">
+      <UniqueIdentifier>{eb4be683-63bf-473b-9a25-2253f71696c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object">
+      <UniqueIdentifier>{1a383e15-91ac-45d2-a6d6-bd5ea29728f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\message">
+      <UniqueIdentifier>{309f9c84-a8ea-4e79-a3f7-200b557f198b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\data">
+      <UniqueIdentifier>{b1e01125-774b-4c23-805a-95e39a730f8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\graphic_resource">
+      <UniqueIdentifier>{395f2ce6-43ca-4db2-a2fa-fa2b58fe11b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\rendering">
+      <UniqueIdentifier>{79afa6c0-1a5d-4b28-87b3-70725a61ffb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\physic">
+      <UniqueIdentifier>{a109f9d1-e8a2-482c-9609-da3d53cb61e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\entity">
+      <UniqueIdentifier>{b3172da8-c13b-4c36-b6a0-87a89e3a5a01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
