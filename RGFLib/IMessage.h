@@ -6,7 +6,7 @@
 namespace rgf
 {
 class IGObject;	//don't include "IGObject.h"
-enum EMessageTypes;
+enum EMessageTypes: int;
 
 struct IMessage
 {
