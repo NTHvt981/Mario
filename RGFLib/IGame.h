@@ -18,11 +18,15 @@ public:
 	IGame( HWND hWnd, HINSTANCE hInstance );
 	static std::shared_ptr<IGame> GetInstance();
 	static void InitInstance(std::shared_ptr<IGame> game);
-
 	void Init();
+	/// <summary>
+	/// load resource -> (update/render) loop
+	/// </summary>
 	void Run();
 	unsigned int GetFrameRate();
 	void SetFrameRate( unsigned int fps );
+	IGameInfo GetGameInfo();
+	void UpdateGameInfo( const IGameInfo i_gameInfo );
 
 protected:
 	HWND m_hWnd = NULL;									// Window handle
@@ -30,9 +34,9 @@ protected:
 	static std::shared_ptr<IGame> m_instance;
 	IGameInfo m_info;
 
-	void LoadResources();
-	void LoadTextures();
-	void LoadSprites();
+	virtual void LoadResources() = 0;
+	virtual void LoadTextures() = 0;
+	virtual void LoadSprites() = 0;
 
 	virtual void Update(DWORD dt) = 0;
 	void Render();
@@ -41,7 +45,7 @@ protected:
 	void CleanResources();
 };
 
-HWND CreateGameWindow( HINSTANCE hInstance, int nCmdShow, int ScreenWidth, int ScreenHeight );
+HWND CreateGameWindow( HINSTANCE hInstance, int nCmdShow, int i_ScreenWidth, int i_ScreenHeight );
 LRESULT CALLBACK WinProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
 }	//namespace rgf
 

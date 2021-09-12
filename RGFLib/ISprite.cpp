@@ -52,7 +52,7 @@ int ISprite::GetId()
 
 void ISprite::GetSize(int& width, int& height)
 {
-	width = m_right - m_left;
-	height = m_bottom - m_top;
+	width = m_right - m_left + 1;
+	height = m_bottom - m_top + 1;
 }
 } //namespace rgf

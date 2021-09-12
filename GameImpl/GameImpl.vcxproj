@@ -161,17 +161,20 @@
   <ItemGroup>
     <ClInclude Include="CGame.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="CBlock.h" />
     <ClInclude Include="Main.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameImpl.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="data\4colors_block.png" />
     <Image Include="GameImpl.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CGame.cpp" />
+    <ClCompile Include="CBlock.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>

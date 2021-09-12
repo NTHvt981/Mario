@@ -18,15 +18,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Constants.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CGame.h">
-      <Filter>Header Files</Filter>
+      <Filter>Impl</Filter>
     </ClInclude>
+    <ClInclude Include="CBlock.h">
+      <Filter>Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="Main.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameImpl.rc">
@@ -40,13 +39,17 @@
     <Image Include="GameImpl.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="data\4colors_block.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CGame.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Impl</Filter>
     </ClCompile>
+    <ClCompile Include="CBlock.cpp">
+      <Filter>Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
 </Project>

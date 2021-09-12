@@ -10,18 +10,6 @@ IGame::IGame(HWND hWnd, HINSTANCE hInstance)
 	this->m_hInstance = hInstance;
 }
 
-void IGame::LoadResources()
-{
-}
-
-void IGame::LoadTextures()
-{
-}
-
-void IGame::LoadSprites()
-{
-}
-
 void IGame::Render()
 {
 	auto graphic = IGraphic::GetInstance();
@@ -36,6 +24,7 @@ void IGame::Render()
 		spriteHandler->Begin( D3DXSPRITE_ALPHABLEND );
 
 		// Draw here
+		this->DuringRender();
 
 		spriteHandler->End();
 		d3ddev->EndScene();
@@ -65,7 +54,13 @@ void IGame::InitInstance(std::shared_ptr<IGame> game)
 
 void IGame::Init()
 {
+#pragma region reset the window true width and height
 	IGraphic::GetInstance()->Init( m_hWnd );
+	LPRECT rect = new RECT{};
+	auto result = GetClientRect( m_hWnd, rect );
+	m_info.m_windowClientWidth = rect->right;
+	m_info.m_windowClientHeight = rect->bottom;
+#pragma endregion
 
 	//CInput::GetInstance()->Init( hInstance, hWnd );
 	//Sound::DirectSound_Init( hWnd );
@@ -143,6 +138,16 @@ void IGame::SetFrameRate( unsigned int fps )
 	m_info.m_frameRate = fps;
 }
 
+IGameInfo IGame::GetGameInfo()
+{
+	return m_info;
+}
+
+void IGame::UpdateGameInfo( const IGameInfo i_gameInfo )
+{
+	m_info = i_gameInfo;
+}
+
 HWND CreateGameWindow( HINSTANCE hInstance, int nCmdShow, int ScreenWidth, int ScreenHeight )
 {
 	WNDCLASSEX wc;
@@ -150,6 +155,14 @@ HWND CreateGameWindow( HINSTANCE hInstance, int nCmdShow, int ScreenWidth, int S
 
 	wc.style = CS_HREDRAW | CS_VREDRAW;
 	wc.hInstance = hInstance;
+#pragma region Recalculate the width and height (add the task bar)
+	LPRECT rect = new RECT{};
+	rect->right = ScreenWidth;
+	rect->bottom = ScreenHeight;
+	auto result = AdjustWindowRect( rect, wc.style, true );
+	ScreenWidth = rect->right - rect->left;
+	ScreenHeight = rect->bottom - rect->top;
+#pragma endregion
 
 	//Try this to see how the debug function prints out file and line 
 	//wc.hInstance = (HINSTANCE)-100; 

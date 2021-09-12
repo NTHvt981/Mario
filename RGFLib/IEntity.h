@@ -10,6 +10,8 @@ namespace rgf
 //TODO add entity(have collision, physic) inherit gameobject
 class IEntity: public IGObject
 {
+public:
+	IEntity( const IGameInfo& info, int id = -1 );
 protected:
 	Vector m_position;
 	Vector m_size;
@@ -24,7 +26,11 @@ protected:
 
 protected:
 	void SetSizeSameAsAnimation();
-	void SetSizeSameAsSprite(ISprite *sprite);
+	void SetSizeSameAsSprite(ISprite *i_sprite);
 	void UpdatePhysicBox();
+
+public:
+	void SetPosition( const Vector i_position );
+	void Move( const Vector i_velocity );
 };
 } //namespace rgf

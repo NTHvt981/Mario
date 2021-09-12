@@ -41,4 +41,13 @@
 #define ID_TEX_BBOX 999		// special texture to draw object bounding box
 
 #define POSITION_START_X 10
-#define POSITION_START_Y 10
+#define POSITION_START_Y 104colors_block
+
+//For testing
+#define FOUR_COLOR_BLOCK_TEXTURE_ID 1
+#define FOUR_COLOR_BLOCK_TEXTURE_PATH L"./data/4colors_block.png"
+
+#define ID_RED_BLOCK 1000
+#define ID_YELLOW_BLOCK 1001
+#define ID_GREEN_BLOCK 1002
+#define ID_BLUE_BLOCK 1003
