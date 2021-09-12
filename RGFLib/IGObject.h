@@ -1,6 +1,9 @@
 #pragma once
 #include <queue>
+#include <Windows.h>
+
 #include "IMessage.h"
+#include "IGameInfo.h"
 
 namespace rgf
 {
@@ -12,14 +15,16 @@ class IGObject
 {
 protected:
 	std::queue<std::shared_ptr<IMessage>> m_messages = std::queue<std::shared_ptr<IMessage>>();
-	int m_id;
+	const IGameInfo* m_gameInfo;
+	const int m_id;
 
 public:
-	IGObject( int id = -1 );
+	IGObject( const IGameInfo& info, int id = -1 );
 	virtual void Init() = 0;
-	virtual void Update() = 0;
+	virtual void Update( DWORD dt ) = 0;
 	virtual void Render() = 0;
 	virtual void Destroy() = 0;
+	virtual int GetRenderLevel() = 0;
 	int GetId() { return m_id; }
 
 protected:

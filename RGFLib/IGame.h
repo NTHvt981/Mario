@@ -4,6 +4,8 @@
 
 #include "Debug.h"
 #include "IEntity.h"
+#include "RgfConstants.h"
+#include "IGameInfo.h"
 
 namespace rgf
 {
@@ -13,7 +15,7 @@ namespace rgf
 class IGame
 {
 public:
-	IGame(HWND hWnd, HINSTANCE hInstance);
+	IGame( HWND hWnd, HINSTANCE hInstance );
 	static std::shared_ptr<IGame> GetInstance();
 	static void InitInstance(std::shared_ptr<IGame> game);
 
@@ -26,18 +28,20 @@ protected:
 	HWND m_hWnd = NULL;									// Window handle
 	HINSTANCE m_hInstance = NULL;
 	static std::shared_ptr<IGame> m_instance;
-	unsigned int m_frameRate = 60;
+	IGameInfo m_info;
 
 	void LoadResources();
 	void LoadTextures();
 	void LoadSprites();
 
-	void Update(DWORD dt);
-
+	virtual void Update(DWORD dt) = 0;
 	void Render();
+	virtual void DuringRender() = 0;
 
 	void CleanResources();
 };
 
+HWND CreateGameWindow( HINSTANCE hInstance, int nCmdShow, int ScreenWidth, int ScreenHeight );
+LRESULT CALLBACK WinProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
 }	//namespace rgf
 

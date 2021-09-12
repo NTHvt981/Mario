@@ -26,6 +26,7 @@
     <ClCompile Include="IEntity.cpp" />
     <ClCompile Include="IEntityLib.cpp" />
     <ClCompile Include="IGame.cpp" />
+    <ClCompile Include="IGameInfo.cpp" />
     <ClCompile Include="IGObject.cpp" />
     <ClCompile Include="IGObjectLib.cpp" />
     <ClCompile Include="IGraphic.cpp" />
@@ -38,6 +39,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Box.h" />
+    <ClInclude Include="IGameInfo.h" />
+    <ClInclude Include="RgfConstants.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="IAnimation.h" />
     <ClInclude Include="ICamera.h" />

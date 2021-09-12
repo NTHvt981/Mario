@@ -1,0 +1,11 @@
+#pragma once
+namespace rgf
+{
+#define BACKGROUND_COLOR D3DCOLOR_XRGB(0, 0, 0)
+#define WINDOW_CLASS_NAME L"NGUYEN TRUNG HIEU'S WINDOW"
+#define WINDOW_TITLE L"MARIO"
+#define WINDOW_ICON_PATH L"Mario.ico"
+#define DEFAULT_GAME_FPS 60
+
+#define MAX_RENDER_LEVEL 10;
+}

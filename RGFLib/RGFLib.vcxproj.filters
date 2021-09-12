@@ -49,6 +49,9 @@
     <ClCompile Include="IEntityLib.cpp">
       <Filter>source\entity</Filter>
     </ClCompile>
+    <ClCompile Include="IGameInfo.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Debug.h">
@@ -101,6 +104,12 @@
     </ClInclude>
     <ClInclude Include="IEntityLib.h">
       <Filter>source\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="RgfConstants.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameInfo.h">
+      <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

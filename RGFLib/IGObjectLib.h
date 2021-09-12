@@ -1,8 +1,11 @@
 #pragma once
 #include <memory>
 #include <unordered_map>
+#include <map>
+#include <vector>
 
 #include "IGObject.h"
+#include "RgfConstants.h"
 
 namespace rgf
 {
@@ -13,13 +16,17 @@ namespace rgf
 class IGObjectLib
 {
 protected:
+	IGObjectLib();
 	static std::shared_ptr<IGObjectLib> m_instance;
 	int m_countId = 0;
-	std::unordered_map<int, IGObject*> m_gameObjects = std::unordered_map<int, IGObject*>();
+	std::unordered_map<int, std::shared_ptr<IGObject>> m_gameObjects = 
+		std::unordered_map<int, std::shared_ptr<IGObject>>();
+	std::vector<std::list<std::shared_ptr<IGObject>>> m_renderObjects;
 	
 public:
 	static std::shared_ptr<IGObjectLib> GetInstance();
-	void Add( IGObject* const i_obj );
-	int GetNewId();
+	void Add( std::shared_ptr<IGObject> const i_obj );
+	void Remove(const int id);
+	const int GetNewId();
 };
 }//namespace rgf

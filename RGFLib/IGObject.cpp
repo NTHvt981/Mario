@@ -2,13 +2,12 @@
 
 namespace rgf
 {
-IGObject::IGObject( int id )
+IGObject::IGObject( const IGameInfo& info, int id ): m_id(id), m_gameInfo(&info)
 {
 	if (id == -1)
 	{
 		throw("Please provide a legit id");
 	}
-	m_id = id;
 }
 void IGObject::UpdateEpilogue()
 {

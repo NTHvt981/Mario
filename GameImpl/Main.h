@@ -12,6 +12,3 @@
 #include "Constants.h"
 #include "IGame.h"
 
-HWND CreateGameWindow(HINSTANCE hInstance, int nCmdShow, int ScreenWidth, int ScreenHeight);
-LRESULT CALLBACK WinProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
-
